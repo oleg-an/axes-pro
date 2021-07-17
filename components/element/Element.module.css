@@ -1,10 +1,14 @@
 .title {
     font-size: 14px;
-    color: #5E6366;
 }
 
-.container {
+.element {
     display: flex;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .icon {

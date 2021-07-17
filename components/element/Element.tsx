@@ -9,12 +9,13 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 export const Element = ({...props}: Props) => {
-    return <div className={style.container}>
+    return <div className={style.element}>
         <div className={style.icon}>
             <Image alt="" src={UserImage}/>
         </div>
-        <div className={style.container}>
+        <div className={style.content}>
             <div className={style.title}>{props.title}</div>
+            <div className={style.title}>{props.value}</div>
         </div>
     </div>
 };
