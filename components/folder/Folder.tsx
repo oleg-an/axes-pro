@@ -26,20 +26,20 @@ export const Folder = ({...props}: Props) => {
     return <div ref={ref} className={style.folder}>
         {isRoot && <div className={style.toggleIcon}
                         onClick={() => setOpened(x => !x)}>
-            <Image alt="" src={ArrowImage}/>
+            <Image width={5} height={10} alt="" src={ArrowImage}/>
         </div>}
         {!isRoot && hasChildren && <div className={style.toggleIcon + ' ' + style.clickable}
                                         onClick={() => setOpened(x => !x)}>
-            <Image alt="" src={ToggleImage}/>
+            <Image width={12} height={8} alt="" src={ToggleImage}/>
         </div>}
 
         <div style={{width: '100%'}}>
             <div className={style.container + ' ' + style.clickable} onClick={() => setOpened(x => !x)}>
                 {isRoot && <div className={style.folder1Icon}>
-                    <Image alt="" src={Folder1Image}/>
+                    <Image width={12} height={10}  alt="" src={Folder1Image}/>
                 </div>}
                 {!isRoot && <div className={style.folder2Icon}>
-                    <Image alt="" src={Folder2Image}/>
+                    <Image width={20} height={16}  alt="" src={Folder2Image}/>
                 </div>}
                 <div className={style.title}>{props.title}</div>
             </div>
