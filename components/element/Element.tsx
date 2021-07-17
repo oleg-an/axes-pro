@@ -11,7 +11,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 export const Element = ({...props}: Props) => {
     return <div className={style.container}>
         <div className={style.icon}>
-            <Image src={UserImage}/>
+            <Image alt="" src={UserImage}/>
         </div>
         <div className={style.container}>
             <div className={style.title}>{props.title}</div>
