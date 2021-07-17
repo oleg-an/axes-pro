@@ -1,12 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {Folder, File, Element} from '../components';
 
 export default function Home() {
     return (
-        <div>
-            <h1>dsvds</h1>
+        <div className={styles.container}>
+            <Folder title="FolderName">
+                <Element title="Menu Item" value={123}/>
 
+                <Folder title="First Level">
+                    <Folder title="Second Level">
+                        <Folder title="Third Level">
+                            <File title="My Documents"/>
+                        </Folder>
+                    </Folder>
+                </Folder>
+            </Folder>
         </div>
     )
 }

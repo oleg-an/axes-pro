@@ -1,0 +1,11 @@
+.title {
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+}
+
+.icon {
+    margin-right: 18px;
+}

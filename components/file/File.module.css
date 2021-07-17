@@ -1,0 +1,12 @@
+.title {
+    font-size: 14px;
+    color: #5E6366;
+}
+
+.container {
+    display: flex;
+}
+
+.icon {
+    margin-right: 12px;
+}
