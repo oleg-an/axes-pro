@@ -23,8 +23,17 @@
     padding-left: 12px;
 }
 
-.folder2Icon {
+.arrowIcon {
     margin-right: 10px;
+}
+
+.folder1Icon {
+    margin-right: 7px;
+    margin-top: -3px;
+}
+
+.folder2Icon {
+    margin-right: 11px;
 }
 
 .toggleIcon {
