@@ -1,6 +1,7 @@
 .title {
     font-size: 14px;
     color: #5E6366;
+    white-space: nowrap;
 }
 
 .container {

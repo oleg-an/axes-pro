@@ -1,6 +1,7 @@
 .folder {
     user-select: none;
     width: 100%;
+    display: flex;
 }
 
 .clickable {
@@ -10,16 +11,16 @@
 .title {
     font-size: 14px;
     color: #5E6366;
+    white-space: nowrap;
 }
 
 .container {
     display: flex;
-    align-items: center;
 }
 
 .children {
-    padding-left: 18px;
     margin-top: 14px;
+    padding-left: 12px;
 }
 
 .folder2Icon {
@@ -27,6 +28,8 @@
 }
 
 .toggleIcon {
-    margin-top: -6px;
-    margin-right: 6px;
+    flex-shrink: 0;
+    margin-top: -2px;
+    margin-left: -17px;
+    margin-right: 8px;
 }

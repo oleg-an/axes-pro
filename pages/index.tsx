@@ -17,7 +17,7 @@ export default function Home() {
                 </Folder>
             </Folder>
             <div className={styles.line} />
-            <div className={styles.subcaption}>Subcaption string</div>
+            <div className={styles.subCaption}>Subcaption string</div>
         </div>
     )
 }
