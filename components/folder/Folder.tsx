@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './Folder.module.css';
 import ArrowImage from '../../public/arrow.svg';
 import ToggleImage from '../../public/toggle.svg';
@@ -13,8 +13,10 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 export const Folder = ({...props}: Props) => {
+    const [opened, setOpened] = useState(true);
+
     return <div className={style.folder}>
-        <div className={style.container}>
+        <div className={style.container + ' ' + style.clickable} onClick={() => setOpened(x => !x)}>
             <div className={style.container}>
                 <div className={style.toggleIcon}>
                     <Image alt="" src={ToggleImage}/>
@@ -25,12 +27,14 @@ export const Folder = ({...props}: Props) => {
             </div>
             <div className={style.title}>{props.title}</div>
         </div>
-        {React.Children.map(props.children as any, (child) => {
-            return (
-                <div className={style.children}>
-                    {child}
-                </div>
-            );
-        })}
+        {opened && <>
+            {React.Children.map(props.children as any, (child) => {
+                return (
+                    <div className={style.children}>
+                        {child}
+                    </div>
+                );
+            })}
+        </>}
     </div>
 };
