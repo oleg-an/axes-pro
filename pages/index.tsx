@@ -28,7 +28,9 @@ export default function Home() {
                                         <Folder title="Level6">
                                             <Folder title="Level7">
                                                 <Folder title="Level8">
-                                                    <File title="My Documents"/>
+                                                    <Folder title="Level9">
+                                                        <File title="My Documents"/>
+                                                    </Folder>
                                                 </Folder>
                                             </Folder>
                                         </Folder>
