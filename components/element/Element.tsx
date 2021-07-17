@@ -15,7 +15,7 @@ export const Element = ({...props}: Props) => {
         </div>
         <div className={style.content}>
             <div className={style.title}>{props.title}</div>
-            <div className={style.title}>{props.value}</div>
+            <div className={style.value}>{props.value}</div>
         </div>
     </div>
 };

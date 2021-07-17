@@ -6,7 +6,6 @@ export default function Home() {
         <div className={styles.container}>
             <Folder title="FolderName">
                 <Element title="Menu Item" value={123}/>
-
                 <Folder title="First Level">
                     <Folder title="Second Level">
                         <Folder title="Third Level">
