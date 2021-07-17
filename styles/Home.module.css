@@ -1,7 +1,6 @@
 .container {
-    margin: 0 auto;
-    width: 240px;
     padding-top: 100px;
+    padding-left: 300px;
 }
 
 .line {

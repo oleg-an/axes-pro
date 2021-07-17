@@ -33,23 +33,24 @@ export const Folder = ({...props}: Props) => {
             <Image width={12} height={8} alt="" src={ToggleImage}/>
         </div>}
 
-        <div style={{width: '100%'}}>
+        <div>
             <div className={style.container + ' ' + style.clickable} onClick={() => setOpened(x => !x)}>
                 {isRoot && <div className={style.folder1Icon}>
-                    <Image width={12} height={10}  alt="" src={Folder1Image}/>
+                    <Image width={12} height={10} alt="" src={Folder1Image}/>
                 </div>}
                 {!isRoot && <div className={style.folder2Icon}>
-                    <Image width={20} height={16}  alt="" src={Folder2Image}/>
+                    <Image width={20} height={16} alt="" src={Folder2Image}/>
                 </div>}
                 <div className={style.title}>{props.title}</div>
             </div>
 
-            {opened && <>{React.Children.map(props.children as any, (child) => {
-                return (<div className={style.children}>
-                    {child}
-                </div>);
-            })}
-            </>}
+            <div style={{display: opened ? 'block' : 'none'}}>
+                {React.Children.map(props.children as any, (child) => {
+                    return (<div className={style.children}>
+                        {child}
+                    </div>);
+                })}
+            </div>
         </div>
     </div>
 };
