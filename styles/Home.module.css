@@ -4,3 +4,14 @@
     padding-top: 100px;
 }
 
+.line {
+    background: #E3E5E5;
+    height: 1px;
+    margin-top: 10px;
+}
+
+.subcaption {
+    color: #5E6366;
+    font-size: 14px;
+    padding: 12px 16px;
+}

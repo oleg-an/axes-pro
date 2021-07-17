@@ -9,11 +9,15 @@ export default function Home() {
                 <Folder title="First Level">
                     <Folder title="Second Level">
                         <Folder title="Third Level">
-                            <File title="My Documents"/>
+                            <Folder title="Fourth Level">
+                                <File title="My Documents"/>
+                            </Folder>
                         </Folder>
                     </Folder>
                 </Folder>
             </Folder>
+            <div className={styles.line} />
+            <div className={styles.subcaption}>Subcaption string</div>
         </div>
     )
 }
