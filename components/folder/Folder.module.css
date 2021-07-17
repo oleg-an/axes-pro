@@ -3,10 +3,6 @@
     display: inline-flex;
 }
 
-.clickable {
-    cursor: pointer;
-}
-
 .title {
     font-size: 14px;
     color: #5E6366;
@@ -14,6 +10,7 @@
 }
 
 .container {
+    cursor: pointer;
     display: inline-flex;
 }
 
@@ -23,7 +20,8 @@
 }
 
 .arrowIcon {
-    margin-right: 10px;
+    cursor: pointer;
+    padding-right: 10px;
 }
 
 .folder1Icon {
@@ -36,8 +34,9 @@
 }
 
 .toggleIcon {
+    cursor: pointer;
     flex-shrink: 0;
     margin-top: -2px;
     margin-left: -17px;
-    margin-right: 8px;
+    padding-right: 8px;
 }

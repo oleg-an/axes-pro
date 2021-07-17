@@ -8,13 +8,12 @@
 
 .element {
     display: inline-flex;
-    min-width: 168px;
 }
 
 .content {
     display: inline-flex;
     justify-content: space-between;
-    width: 100%;
+    width: 180px;
 }
 
 .icon {
