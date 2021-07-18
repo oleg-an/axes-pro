@@ -11,7 +11,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     title: string;
 }
 
-const getToggleIcon = (isRootFolder: boolean, childrenShown: boolean, hasChildren: boolean) => {
+const getToggleIcon = (isRootFolder: boolean, childrenShown: boolean) => {
     if (isRootFolder) {
         return <div className={style.arrowIcon}>
             <div style={{transform: childrenShown ? 'rotate(0)' : 'rotate(270deg)'}}>
@@ -49,15 +49,15 @@ export const Folder = ({...props}: Props) => {
 
     // @ts-ignore
     return <div ref={ref} className={style.folder}>
-        <div onClick={() => setChildrenShown(x => !x)}>
-            {getToggleIcon(isRootFolder, childrenShown, hasChildren)}
-        </div>
+        {hasChildren && <div onClick={() => setChildrenShown(x => !x)}>
+            {getToggleIcon(isRootFolder, childrenShown)}
+        </div>}
         <div>
-            <div className={style.container} onClick={() => setChildrenShown(x => !x)}>
+            <div className={style.titleBlock} onClick={() => setChildrenShown(x => !x)}>
                 {getFolderIcon(isRootFolder)}
                 <div className={style.title}>{props.title}</div>
             </div>
-            {childrenShown && <div style={{paddingLeft: isRootFolder ? '0' : '12px'}}>
+            {childrenShown && <div style={{paddingLeft: isRootFolder ? '0' : '10px'}}>
                 {React.Children.map(props.children as any, (child) => {
                     return (<div className={style.children}>
                         {child}

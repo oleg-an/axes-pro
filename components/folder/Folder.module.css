@@ -9,9 +9,10 @@
     white-space: nowrap;
 }
 
-.container {
+.titleBlock {
     cursor: pointer;
     display: inline-flex;
+    align-items: center;
 }
 
 .children {
@@ -36,6 +37,6 @@
     cursor: pointer;
     flex-shrink: 0;
     margin-top: -3px;
-    margin-left: -20px;
+    margin-left: -15px;
     padding-right: 8px;
 }
