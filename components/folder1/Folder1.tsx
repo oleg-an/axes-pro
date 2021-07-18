@@ -25,7 +25,7 @@ export const Folder1 = ({...props}: FolderProps) => {
                 </div>
                 <div className={style.title}>{props.title}</div>
             </div>
-            {childrenShown && <div style={{paddingLeft: '10px'}}>
+            {childrenShown && <div>
                 {React.Children.map(props.children as any, (child) => {
                     return (<div className={style.children}>
                         {child}
