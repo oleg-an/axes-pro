@@ -13,7 +13,7 @@ export const Folder1 = ({...props}: FolderProps) => {
     return <div className={style.folder}>
         {hasChildren && <div onClick={() => setChildrenShown(x => !x)}>
             <div className={style.arrowIcon}>
-                <div style={{transform: childrenShown ? 'rotate(0)' : 'rotate(270deg)'}}>
+                <div style={{transform: childrenShown ? 'rotate(0)' : 'rotate(90deg)'}}>
                     <Image alt="" src={ArrowImage}/>
                 </div>
             </div>
