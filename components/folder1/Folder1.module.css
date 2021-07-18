@@ -1,0 +1,30 @@
+.folder {
+    user-select: none;
+    display: inline-flex;
+}
+
+.title {
+    font-size: 14px;
+    color: #5E6366;
+    white-space: nowrap;
+}
+
+.titleBlock {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.children {
+    margin-top: 14px;
+}
+
+.arrowIcon {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.folder1Icon {
+    margin-right: 7px;
+    margin-top: -3px;
+}
