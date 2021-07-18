@@ -14,28 +14,26 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const getToggleIcon = (isRootFolder: boolean, childrenShown: boolean, hasChildren: boolean) => {
     if (isRootFolder) {
         return <div className={style.arrowIcon}>
-            <div style={{transform: childrenShown ? 'rotate(90deg)' : 'rotate(360deg)'}}>
-                <Image width={5} height={10} alt="" src={ArrowImage}/>
-            </div>
-        </div>;
-    }
-    if(hasChildren) {
-        return <div className={style.toggleIcon}>
             <div style={{transform: childrenShown ? 'rotate(0)' : 'rotate(270deg)'}}>
-                <Image width={12} height={8} alt="" src={ToggleImage}/>
+                <Image alt="" src={ArrowImage}/>
             </div>
         </div>;
     }
+    return <div className={style.toggleIcon}>
+        <div style={{transform: childrenShown ? 'rotate(0)' : 'rotate(270deg)'}}>
+            <Image alt="" src={ToggleImage}/>
+        </div>
+    </div>;
 }
 
 const getFolderIcon = (isRootFolder: boolean) => {
     if (isRootFolder) {
-        return isRootFolder && <div className={style.folder1Icon}>
-            <Image width={12} height={10} alt="" src={Folder1Image}/>
+        return <div className={style.folder1Icon}>
+            <Image alt="" src={Folder1Image}/>
         </div>;
     }
     return <div className={style.folder2Icon}>
-        <Image width={20} height={16} alt="" src={Folder2Image}/>
+        <Image alt="" src={Folder2Image}/>
     </div>;
 }
 
@@ -59,13 +57,13 @@ export const Folder = ({...props}: Props) => {
                 {getFolderIcon(isRootFolder)}
                 <div className={style.title}>{props.title}</div>
             </div>
-            <div style={{display: childrenShown ? 'block' : 'none'}}>
+            {childrenShown && <div style={{paddingLeft: isRootFolder ? '0' : '12px'}}>
                 {React.Children.map(props.children as any, (child) => {
                     return (<div className={style.children}>
                         {child}
                     </div>);
                 })}
-            </div>
+            </div>}
         </div>
     </div>
 };
